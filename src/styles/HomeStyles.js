@@ -3,12 +3,13 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   contiainer: {
     flex: 1,
+    flexGrow: 1,
   },
   carousel: {
     // flex: 1,
+    flexGrow: 1,
   },
   body: {
-    // flex: 1,
     flexGrow: 1,
     paddingStart: 20,
     paddingEnd: 20,

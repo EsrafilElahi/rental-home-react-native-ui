@@ -16,11 +16,20 @@ import {
 import { EvilIcons } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import HouseItem from "./../components/HouseItem";
-import DetailScreen from "./DetailScreen";
 
 // styles
-import GlobalStyles from "../styles/HomeStyles";
 import Colors from "../styles/Colors";
+
+// details images
+const img1 = require("../../assets/images/detailsImg/1.jpg");
+const img2 = require("../../assets/images/detailsImg/2.jpg");
+const img3 = require("../../assets/images/detailsImg/3.jpg");
+const img4 = require("../../assets/images/detailsImg/4.jpg");
+const img5 = require("../../assets/images/detailsImg/5.jpg");
+const img6 = require("../../assets/images/detailsImg/6.jpg");
+const img7 = require("../../assets/images/detailsImg/7.jpg");
+const img8 = require("../../assets/images/detailsImg/8.jpg");
+const img9 = require("../../assets/images/detailsImg/9.jpg");
 
 // dimensions
 const screenWidth = Dimensions.get("screen").width;
@@ -80,13 +89,11 @@ const ListScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView
-      style={[
-        {
-          padding: 15,
-          backgroundColor: "white",
-        },
-        GlobalStyles.contiainer,
-      ]}
+      style={{
+        padding: 15,
+        flex: 1,
+        backgroundColor: "white",
+      }}
     >
       <StatusBar backgroundColor="transparent" barStyle="dark-content" />
 
@@ -171,7 +178,7 @@ const ListScreen = ({ navigation }) => {
         />
       </View>
 
-      <View style={{ flexGrow: 1 }}>
+      <View style={{ felx: 1 , flexGrow: .3 }}>
         <View
           style={{
             display: "flex",
@@ -188,7 +195,7 @@ const ListScreen = ({ navigation }) => {
               style={[
                 index === activeTab
                   ? {
-                      fontFamily: "bold",
+                      fontFamily: "medium",
                       color: "black",
                       borderBottomWidth: 2,
                       paddingBottom: 5,
@@ -225,11 +232,37 @@ const ListScreen = ({ navigation }) => {
           >
             <Pressable
               onPress={() =>
-                navigation.navigate("Detail", {
+                navigation.replace("Detail", {
                   img: require("../../assets/images/8.jpg"),
                   title: "Los Angeles",
                   address: "Central Park, West Side, California",
                   price: "$4.500.000",
+                  details_img: [
+                    {
+                      id: 7,
+                      src: img7,
+                    },
+                    {
+                      id: 8,
+                      src: img8,
+                    },
+                    {
+                      id: 9,
+                      src: img9,
+                    },
+                  ],
+                  rate: {
+                    point: 4.8,
+                    rate: "155 ratings",
+                  },
+                  details: {
+                    beds: "2 Beds",
+                    baths: "2 Baths",
+                    area: "100m Area",
+                  },
+                  description:
+                    "this building is located in the oiver area withi walking distance of shops...",
+                  type: "Virtual Tour",
                 })
               }
             >
@@ -284,11 +317,37 @@ const ListScreen = ({ navigation }) => {
           >
             <Pressable
               onPress={() =>
-                navigation.navigate("Detail", {
+                navigation.replace("Detail", {
                   img: require("../../assets/images/3.jpg"),
                   title: "New York",
                   address: "118 Street, West Edmonton, New York",
                   price: "$3.000.000",
+                  details_img: [
+                    {
+                      id: 1,
+                      src: img1,
+                    },
+                    {
+                      id: 2,
+                      src: img2,
+                    },
+                    {
+                      id: 3,
+                      src: img3,
+                    },
+                  ],
+                  rate: {
+                    point: 4.2,
+                    rate: "180 ratings",
+                  },
+                  details: {
+                    beds: "4 Beds",
+                    baths: "3 Baths",
+                    area: "230m Area",
+                  },
+                  description:
+                    "this building is located in the oiver area within walking distance of stadium...",
+                  type: "For Life",
                 })
               }
             >
@@ -343,11 +402,37 @@ const ListScreen = ({ navigation }) => {
           >
             <Pressable
               onPress={() =>
-                navigation.navigate("Detail", {
+                navigation.replace("Detail", {
                   img: require("../../assets/images/6.jpg"),
                   title: "Washington DC",
                   address: "Wall Street, Goerge Street, Washington DC",
                   price: "$2.850.000",
+                  details_img: [
+                    {
+                      id: 3,
+                      src: img4,
+                    },
+                    {
+                      id: 4,
+                      src: img5,
+                    },
+                    {
+                      id: 5,
+                      src: img6,
+                    },
+                  ],
+                  rate: {
+                    point: 5,
+                    rate: "250 ratings",
+                  },
+                  details: {
+                    beds: "3 Beds",
+                    baths: "1 Baths",
+                    area: "110m Area",
+                  },
+                  description:
+                    "this building is located in the oiver area withi walking distance of school and college...",
+                  type: "Villa Building",
                 })
               }
             >

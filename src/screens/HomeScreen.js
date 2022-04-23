@@ -127,7 +127,7 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
       <View style={GlobalStyles.body}>
-        <View>
+        <View style={{ flexGrow: 1 }}>
           <Text
             style={{
               fontFamily: "bold",
@@ -154,7 +154,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={{ marginVertical: 35, flexGrow: 1 }}>
           <Pressable
             style={GlobalStyles.btnContainer}
-            onPress={() => navigation.navigate("List")}
+            onPress={() => navigation.replace("List")}
           >
             <Text style={GlobalStyles.btn}>Get Started</Text>
           </Pressable>

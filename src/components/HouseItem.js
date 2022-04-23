@@ -2,11 +2,13 @@ import { View, Text, Image, Dimensions } from "react-native";
 import React from "react";
 
 const HouseItem = ({ item }) => {
+  const { width, height } = Dimensions.get("screen");
+
   return (
     <View
       style={{
         marginHorizontal: 10,
-        marginBottom: 18,
+        marginBottom: 17,
         display: "flex",
         borderRadius: 10,
         backgroundColor: "white",
@@ -18,12 +20,14 @@ const HouseItem = ({ item }) => {
         shadowOpacity: 0.37,
         shadowRadius: 7.49,
         elevation: 12,
+        flex: 1,
+        flexGrow: 1,
       }}
     >
       <Image
         style={{
           width: Dimensions.get("screen").width / 2.5,
-          height: 140,
+          height: height / 5,
           borderRadius: 10,
         }}
         source={item.src}

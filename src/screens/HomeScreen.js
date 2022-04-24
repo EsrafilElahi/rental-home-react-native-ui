@@ -131,6 +131,7 @@ const HomeScreen = ({ navigation }) => {
           <Text
             style={{
               fontFamily: "bold",
+              // color: "red",
               fontSize: 35,
               paddingEnd: 75,
               flexGrow: 1,
@@ -140,14 +141,14 @@ const HomeScreen = ({ navigation }) => {
           </Text>
           <Text
             style={{
-              color: "red",
+              // color: "red",
               fontFamily: "light",
               marginTop: 5,
               paddingEnd: 75,
               flexGrow: 1,
             }}
           >
-            visit by one click and save your ropm to enjoy the travel in the
+            visit by one click and save your room to enjoy the travel in the
             home sweet
           </Text>
         </View>

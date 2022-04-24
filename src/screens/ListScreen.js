@@ -178,7 +178,7 @@ const ListScreen = ({ navigation }) => {
         />
       </View>
 
-      <View style={{ felx: 1 , flexGrow: .3 }}>
+      <View style={{ felx: 1, flexGrow: 0.3 }}>
         <View
           style={{
             display: "flex",
@@ -285,9 +285,7 @@ const ListScreen = ({ navigation }) => {
                 <Text style={{ fontFamily: "medium", fontSize: 16 }}>
                   Los Angeles
                 </Text>
-                <Text style={{ fontFamily: "regular", color: "red" }}>
-                  $4.500.000
-                </Text>
+                <Text style={{ fontFamily: "regular" }}>$4.500.000</Text>
               </View>
               <View style={{}}>
                 <Text style={{ fontFamily: "light" }}>
